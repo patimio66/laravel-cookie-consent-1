@@ -8,13 +8,13 @@ use Illuminate\Support\ServiceProvider;
 
 class CookieConsentServiceProvider extends ServiceProvider
 {
-    public const string COOKIE_CONSENT_MODAL_ID = 'cookie-consent-modal';
+    public const COOKIE_CONSENT_MODAL_ID = 'cookie-consent-modal';
 
-    public const string COOKIE_CONSENT_SETTINGS_MODAL_ID = 'cookie-consent-settings-modal';
+    public const COOKIE_CONSENT_SETTINGS_MODAL_ID = 'cookie-consent-settings-modal';
 
-    public const string FILAMENT_THEME = 'filament';
+    public const FILAMENT_THEME = 'filament';
 
-    public const string DEFAULT_THEME = 'default';
+    public const DEFAULT_THEME = 'default';
 
     public function boot(): void
     {
