@@ -16,6 +16,10 @@ class CookieConsentMiddleware
             return $response;
         }
 
+        if ($response->isClientError() || $response->isServerError()) {
+            return $response;
+        }
+
         if (! $this->containsBodyTag($response)) {
             return $response;
         }
