@@ -16,8 +16,10 @@ class CookieConsentMiddleware
             return $response;
         }
 
-        if ($response->isClientError() || $response->isServerError()) {
-            return $response;
+        if (config('cookie-consent.skip_on_error_responses', false)) {
+            if ($response->isClientError() || $response->isServerError()) {
+                return $response;
+            }
         }
 
         if (! $this->containsBodyTag($response)) {
